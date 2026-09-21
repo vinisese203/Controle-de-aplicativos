@@ -13,7 +13,7 @@ O projeto está dividido em **6 arquivos Python**, cada um com uma responsabilid
 Quando precisar fazer alguma alteração, basta ir direto no módulo certo:
 
 ```
-Controle-de-aplicativos/
+app-data/
 │
 ├── main.py              ← Ponto de entrada (arquivo que o Streamlit executa)
 ├── config.py            ← Visual / Tema / CSS customizado
@@ -104,48 +104,6 @@ Controle-de-aplicativos/
 | Particular | ⬜ Cinza | `#888888` |
 
 Para alterar, edite o dicionário `cores_apps` dentro de `render_tab_graficos()` em `dashboard.py`.
-
----
-
-## ☁️ Como Publicar no Streamlit Cloud
-
-### 1. Subir para o GitHub
-```bash
-git add .
-git commit -m "Versão modularizada pronta"
-git push origin main
-```
-
-### 2. Conectar no Streamlit Cloud
-1. Acesse [share.streamlit.io](https://share.streamlit.io)
-2. Clique em **"New app"**
-3. Selecione o repositório `app-data`
-4. Em **"Main file path"** coloque: `main.py`
-5. Clique em **Deploy**
-
-### 3. Configurar os Secrets (IMPORTANTE!)
-No Streamlit Cloud, vá em **Settings → Secrets** e cole:
-
-```toml
-TURSO_DATABASE_URL = "https://controle-aplicativos-vnsrs.aws-us-east-1.turso.io"
-TURSO_AUTH_TOKEN = "SEU_TOKEN_AQUI"
-```
-
-> Isso mantém suas credenciais seguras e fora do código público no GitHub.
-
----
-
-## 💻 Como Rodar Localmente
-
-```bash
-# Instalar as dependências
-pip install -r requirements.txt
-
-# Rodar o aplicativo
-streamlit run main.py
-```
-
-O aplicativo vai abrir automaticamente no navegador em `http://localhost:8501`.
 
 ---
 
