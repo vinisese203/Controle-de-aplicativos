@@ -13,7 +13,7 @@ O projeto está dividido em **6 arquivos Python**, cada um com uma responsabilid
 Quando precisar fazer alguma alteração, basta ir direto no módulo certo:
 
 ```
-app-data/
+Controle-de-aplicativos/
 │
 ├── main.py              ← Ponto de entrada (arquivo que o Streamlit executa)
 ├── config.py            ← Visual / Tema / CSS customizado
